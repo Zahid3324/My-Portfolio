@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zahid Abbas portfolio
 
-## Getting Started
+A responsive Next.js portfolio inspired by the supplied design: white surfaces, a yellow-accented ZA logo, animated portrait, project cards, experience, skills, certificates, and a contact form.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Copy `.env.example` to `.env.local` and set `MONGODB_URI` to enable project loading and contact-message storage. The local `.env.local` already has the WhatsApp number you provided; `.env.local` is ignored by Git. Add the same `NEXT_PUBLIC_WHATSAPP_NUMBER` to your hosting environment to show WhatsApp links after deployment. The Projects section uses clearly labeled sample concepts when MongoDB is not configured. The contact API returns a setup error until a database is configured.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The floating portfolio chat includes quick replies and links into the dedicated pages. Set `NEXT_PUBLIC_WHATSAPP_NUMBER` to an international phone number with country code (digits only) to include an optional WhatsApp conversation link. Replace the sample email address in `src/data/portfolioData.ts` before publishing.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project layout
 
-## Learn More
+- `public/images/profile.png` — supplied profile image.
+- `public/images/projects/` and `public/images/certificates/` — add project and certificate artwork here.
+- `src/app/` — Next.js pages, icon, and API route handlers.
+- `src/app/about/`, `skills/`, `experience/`, `projects/`, `certificates/`, and `contact/` — dedicated portfolio pages. Home also previews every portfolio section.
+- `src/components/home/HomePage.tsx` — composes the complete home page from all portfolio sections.
+- `src/components/navbar/` and `src/components/footer/` — shared site navigation and footer.
+- `src/components/hero/`, `about/`, `skills/`, `experience/`, `projects/`, `certificates/`, and `contact/` — independently organized section components.
+- `src/components/layout/` — shared shell for the dedicated section pages.
+- `src/components/ui/` — reusable buttons, cards, skill icons, progress rings, chat assistant, and animated theme toggle.
+- `src/data/portfolioData.ts` — editable profile, skills, experience, and sample project content.
+- `src/lib/mongodb.ts` — cached MongoDB connection.
+- `src/models/` — Mongoose contact-message and project schemas.
+- `src/types/` — shared TypeScript types.
 
-To learn more about Next.js, take a look at the following resources:
+The navbar theme switch follows the saved browser preference (or system dark-mode preference) and animates between the white/yellow light theme and charcoal/yellow dark theme.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## MongoDB collections
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The `projects` collection displays documents with `isPublished: true`, ordered by `order`. Project documents include `title`, `category`, `description`, `technologies`, `preview` (`store`, `dashboard`, or `travel`), optional `href`, `order`, `featured`, and `isPublished`.
 
-## Deploy on Vercel
+The `messages` collection stores validated contact form submissions. Keep `.env.local` and all MongoDB credentials private.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Validation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run lint
+npm run build
+```

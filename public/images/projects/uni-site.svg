@@ -1,0 +1,97 @@
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="uniBg" x1="0" y1="0" x2="800" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0c1724"/>
+      <stop offset="50%" stop-color="#122438"/>
+      <stop offset="100%" stop-color="#18324f"/>
+    </linearGradient>
+    <linearGradient id="uniCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b3450"/>
+      <stop offset="100%" stop-color="#112234"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" rx="16" fill="url(#uniBg)"/>
+
+  <!-- Top Navigation -->
+  <g transform="translate(60, 40)">
+    <rect width="680" height="52" rx="12" fill="#132437" stroke="rgba(255,255,255,0.1)"/>
+    <circle cx="36" cy="26" r="14" fill="#0284c7"/>
+    <text x="36" y="32" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="900" text-anchor="middle">🎓</text>
+    <text x="64" y="32" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="800">Riphah Portal · Faculty of Computing</text>
+    <text x="440" y="31" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13">Admissions</text>
+    <text x="530" y="31" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13">Faculty</text>
+    <rect x="590" y="12" width="76" height="28" rx="8" fill="#eab308"/>
+    <text x="628" y="30" fill="#0f172a" font-family="system-ui, sans-serif" font-size="12" font-weight="750" text-anchor="middle">LMS Login</text>
+  </g>
+
+  <!-- Left Side: Student Information & Academic Overview -->
+  <g transform="translate(60, 110)">
+    <rect width="400" height="320" rx="16" fill="url(#uniCard)" stroke="rgba(255,255,255,0.1)"/>
+    
+    <text x="28" y="38" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700">Student Academic Dashboard</text>
+    <text x="28" y="58" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Bachelor of Science in Software Engineering (BS SE)</text>
+
+    <!-- Student Metric 1: CGPA -->
+    <g transform="translate(28, 80)">
+      <rect width="160" height="74" rx="12" fill="#15283c" stroke="rgba(56, 189, 248, 0.2)"/>
+      <text x="18" y="28" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="600">CURRENT CGPA</text>
+      <text x="18" y="58" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="24" font-weight="800">3.72</text>
+      <text x="90" y="56" fill="#10b981" font-family="system-ui, sans-serif" font-size="11">Grade: A</text>
+    </g>
+
+    <!-- Student Metric 2: Completed Credits -->
+    <g transform="translate(208, 80)">
+      <rect width="164" height="74" rx="12" fill="#15283c" stroke="rgba(234, 179, 8, 0.2)"/>
+      <text x="18" y="28" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="600">CREDIT HOURS</text>
+      <text x="18" y="58" fill="#eab308" font-family="system-ui, sans-serif" font-size="24" font-weight="800">114 / 136</text>
+    </g>
+
+    <!-- Course List Box -->
+    <g transform="translate(28, 174)">
+      <rect width="344" height="120" rx="12" fill="#15283c"/>
+      <text x="16" y="24" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="11" font-weight="700">ENROLLED COURSES</text>
+
+      <text x="16" y="48" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12">Web Engineering &amp; Architecture</text>
+      <text x="328" y="48" fill="#10b981" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="end">4 Cr</text>
+
+      <text x="16" y="74" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12">Database Management Systems</text>
+      <text x="328" y="74" fill="#10b981" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="end">4 Cr</text>
+
+      <text x="16" y="100" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12">Software Design &amp; Patterns</text>
+      <text x="328" y="100" fill="#10b981" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="end">3 Cr</text>
+    </g>
+  </g>
+
+  <!-- Right Side: Announcements & Portal Features -->
+  <g transform="translate(480, 110)">
+    <rect width="260" height="320" rx="16" fill="url(#uniCard)" stroke="rgba(255,255,255,0.1)"/>
+    <text x="24" y="38" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Portal Highlights</text>
+    
+    <g transform="translate(20, 60)">
+      <circle cx="16" cy="18" r="14" fill="rgba(2, 132, 199, 0.2)"/>
+      <text x="16" y="23" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">📢</text>
+      <text x="40" y="16" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Noticeboard API</text>
+      <text x="40" y="32" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Live notices &amp; exam dates</text>
+    </g>
+
+    <g transform="translate(20, 124)">
+      <circle cx="16" cy="18" r="14" fill="rgba(234, 179, 8, 0.2)"/>
+      <text x="16" y="23" fill="#eab308" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">📑</text>
+      <text x="40" y="16" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Attendance Tracker</text>
+      <text x="40" y="32" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Real-time percentage audit</text>
+    </g>
+
+    <g transform="translate(20, 188)">
+      <circle cx="16" cy="18" r="14" fill="rgba(16, 185, 129, 0.2)"/>
+      <text x="16" y="23" fill="#10b981" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">💳</text>
+      <text x="40" y="16" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Fee Voucher System</text>
+      <text x="40" y="32" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Challan generation &amp; bank status</text>
+    </g>
+
+    <g transform="translate(20, 256)">
+      <rect width="220" height="38" rx="10" fill="#0284c7"/>
+      <text x="110" y="24" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">View Academic Portal →</text>
+    </g>
+  </g>
+</svg>
